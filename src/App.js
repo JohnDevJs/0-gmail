@@ -1,35 +1,19 @@
-import React from 'react'
 import './App.css';
-import Header from "./Header";
-import Sidebar from './Sidebar';
-import Mail from './Mail';
-import EmailList from './EmailList';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import { Navbar} from 'reactstrap';
+import  IndexRoutes  from "./routes/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/Footer/Footer";
+import NavbarComp from "./components/Navbar/Navbar";
+
+
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-          <div className='app__body'>
-          <Sidebar />
-          <Switch>
-            <Route path='/mail'>
-              <Mail />
-            </Route>
-            <Route path='/mail'>
-              <EmailList />
-            </Route>
-
-          </Switch>
-          </div>                   
-      </div> 
-    </Router>  
+    <>
+    <NavbarComp/>
+    <IndexRoutes/>
+    <Footer/>
+    </>
   );
 }
 
